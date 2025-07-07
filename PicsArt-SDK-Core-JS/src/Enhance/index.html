@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background | editor</title>
+  <link rel="stylesheet" href="./style/gilroyfonts.css" />
+  <script src="./scripts/script.js" defer></script>
+  <style>
+    #patt_img {
+      height: 50px;
+    }
+
+    #rend_img {
+      height: 120px;
+    }
+
+    #upscale-img {
+      width: 1296px !important;
+      height: 864px !important;
+      margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #upscale-img {
+        padding: 0px;
+        width: 375px !important;
+        height: 1212px !important;
+      }
+
+      #patt_img {
+        height: 50px;
+      }
+    }
+
+    @media (min-width: 960px) and (max-width: 1320px) {
+      #upscale-img {
+        padding: 0px;
+        width: 862px !important;
+        height: 1024px !important;
+      }
+
+      #patt_img {
+        height: 36px;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 960px) {
+      #upscale-img {
+        width: 736px !important;
+        height: 1172px !important;
+        padding: 0 24px;
+      }
+
+      #patt_img {
+        height: 36px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+  <div id="upscale-img">
+    <header>
+      <div class="heading">Try Now</div>
+    </header>
+    <main class="main__container">
+      <div class="main__content">
+        <div class="main__edit-params">
+          <div class="subtitle">Try one of these images:</div>
+          <div>
+            <div class="patt_div">
+              <div id="patterns"></div>
+            </div>
+          </div>
+          <div class="edit-params-text_div">
+            <p class="edit-params_txt">Can't pick?</p>
+            <p class="edit-params_txt">Upload your own image</p>
+          </div>
+
+          <div class="upload-btn_div gtm-track-try-demo">
+            <input type="file" id="upload__img" accept=".png, .jpg, .jpeg, .webp" />
+            <label for="upload__img" class="bck-img_label gtm-track-try-demo">
+              <img src="./img/upload.svg" />
+              Upload photo
+            </label>
+          </div>
+        </div>
+        <div class="main__result-img">
+          <div class="result-img__div">
+            <div id="res-image" class="drop-zone">
+              <input type="file" id="upload__img" class="drop-zone__input" accept=".png, .jpg, .jpeg, .webp" />
+              <div id="one" class="bal-container">
+                <div class="bal-after">
+                  <img class="after_img"
+                    src="https://pastatic.picsart.com/cms-pastatic/97ff2ec7-2f17-44a9-86a6-20d19db6ecd8.jpg">
+                  <div class="load"></div>
+                  <div class="bal-afterPosition afterLabel">
+                    After
+                  </div>
+                </div>
+                <div class="bal-before">
+                  <div class="bal-before-inset">
+                    <img class='before_img' src="./img/img_small/0.jpg">
+                    <div class="load"></div>
+                    <div class="bal-beforePosition beforeLabel">
+                      Before
+                    </div>
+                  </div>
+                </div>
+                <div class="bal-handle">
+                  <span class=" handle-left-arrow">
+                    <img src="./img/before.svg">
+                  </span>
+                  <span class="handle-right-arrow">
+                    <img src="./img/after.svg">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__req-code">
+        <div id="req_code">
+          <p class="requirements"></p>
+          <div class="code_example" id="text-to-copy"></div>
+        </div>
+        <div class="code_buttons">
+          <button class="c_btn js_btn gtm-track-try-demo">JS / React</button>
+          <button class="c_btn nodejs_btn gtm-track-try-demo">JS / Node</button>
+          <button class="c_btn java_btn gtm-track-try-demo">Java</button>
+          <button class="c_btn python_btn gtm-track-try-demo">Python</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="find">
+        <a href="https://picsart.io/api-reference" class="gtm-track-try-demo" target="_blank">Find more details</a>
+      </div>
+      <div class="footer_btns">
+        <form action="https://console.picsart.io/login" target="_blank" method="get">
+          <button class="api-key_btn gtm-track-try-demo">Get API key</button>
+        </form>
+        <button class="copy-code_btn gtm-track-try-demo" onclick="copyCode()">
+          <span class="c_btn-txt">Copy code</span>
+          <i class="c_btn-i">
+            <img src="./img/copy.svg" alt="Copy">
+          </i>
+        </button>
+        <button class="share_btn" onclick="shareCode()">
+          <i class="c_btn-i">
+            <img src="./img/share.svg" alt="Share">
+          </i>
+        </button>
+      </div>
+    </footer>
+    <div class="status" style="display: none;">
+      <div class="status_icon">
+        <img src="./img/icons/x.svg" class="problem_i">
+      </div>
+      <div class="status_txt">
+        <span class="status_txt_head">Dialog header</span>
+        <span class="status_txt_body">Dialog body text</span>
+      </div>
+      <a class='status_close' onclick="closeStatus()">
+        <img src="./img/icons/close.svg">
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

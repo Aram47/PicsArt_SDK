@@ -1,0 +1,13 @@
+# .vscode
+.vscode
+
+# node_modules
+/PicsArt-SDK-Core-JS/node_modules
+
+# dist
+/PicsArt-SDK-Core-JS/dist
+
+# temp ignore
+/PicsArt-SDK-React
+/PicsArt-SDK-React-TypeScript
+/PicsArt-SDK-Core-JS/src/RemoveBg

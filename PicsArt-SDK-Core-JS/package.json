@@ -1,0 +1,48 @@
+{
+  "name": "picsart-sdk-core-js",
+  "version": "1.0.0",
+  "description": "PicsArt SDK for JavaScript",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "picsart",
+    "sdk",
+    "image-processing",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "vite-plugin-static-copy": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./enhance": {
+      "import": "./dist/enhance.es.js",
+      "require": "./dist/enhance.cjs.js"
+    },
+    "./remove-bg": {
+      "import": "./dist/remove-bg.es.js",
+      "require": "./dist/remove-bg.cjs.js"
+    },
+    "./styles": "./dist/styles/style.css"
+  }
+}
