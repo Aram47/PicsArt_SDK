@@ -1,0 +1,257 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background | editor</title>
+    <link rel="stylesheet" href="./styles/gilroyfonts.css" />
+    <script src="./scripts/script.js" defer></script>
+    <style>
+      #patt_img {
+        height: 50px;
+      }
+
+      #remove-bg {
+        width: 1296px !important;
+        height: 864px !important;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #remove-bg {
+          padding: 0px;
+          width: 375px !important;
+          height: 1212px !important;
+        }
+
+        #rend_img {
+          height: 218px;
+        }
+
+        #patt_img {
+          height: 50px;
+        }
+        .pattern_btn {
+          object-fit: cover !important;
+        }
+      }
+
+      @media (min-width: 960px) and (max-width: 1320px) {
+        #remove-bg {
+          padding: 0px;
+          width: 862px !important;
+          height: 1024px !important;
+        }
+
+        #patt_img {
+          height: 36px;
+        }
+
+        .pattern_btn {
+          width: 62px !important;
+          height: 62px !important;
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 960px) {
+        #remove-bg {
+          width: 786px !important;
+          height: 1172px !important;
+          padding: 0 24px;
+        }
+
+        #patt_img {
+          height: 36px;
+        }
+
+        .pattern_btn {
+          width: 62px !important;
+          height: 62px !important;
+        }
+      }
+
+      .pattern_btn {
+        background-image: var(--url);
+        width: 72px;
+        height: 72px;
+        border-radius: 4px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        background-size: cover;
+        box-sizing: border-box;
+      }
+
+      /* pattern icons urls */
+      .patt_btn_0 {
+        --url: url('./img/patterns/rm-0.png');
+      }
+
+      .patt_btn_1 {
+        --url: url('./img/patterns/rm-1.png');
+      }
+
+      .patt_btn_2 {
+        --url: url('./img/patterns/rm-2.png');
+      }
+
+      .patt_btn_3 {
+        --url: url('./img/patterns/rm-3.png');
+      }
+
+      .patt_btn_4 {
+        --url: url('./img/patterns/rm-4.png');
+      }
+
+      .patt_btn_5 {
+        --url: url('./img/patterns/rm-5.png');
+      }
+
+      .patt_btn_6 {
+        --url: url('./img/patterns/rm-6.png');
+      }
+
+      .patt_btn_7 {
+        --url: url('./img/patterns/rm-7.png');
+      }
+
+      .patt_btn_8 {
+        --url: url('./img/patterns/rm-8.png');
+      }
+
+      .active_patt_btn {
+        border: 2px solid #c209c1 !important;
+        border-radius: 6px !important;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <div id="remove-bg">
+      <header>
+        <div class="heading">Try Now</div>
+      </header>
+      <main class="main__container">
+        <div class="main__content">
+          <div class="main__edit-params">
+            <div class="subtitle">Try one of these images:</div>
+            <div>
+              <div class="patt_div">
+                <div id="patterns"></div>
+              </div>
+            </div>
+            <div class="edit-params-text_div">
+              <p class="edit-params_txt">Can't pick?</p>
+              <p class="edit-params_txt">Upload your own image</p>
+            </div>
+
+            <div class="upload-btn_div gtm-track-try-demo">
+              <input
+                type="file"
+                id="upload__img"
+                accept=".png, .jpg, .jpeg, .webp"
+              />
+              <label for="upload__img" class="bck-img_label gtm-track-try-demo">
+                <i
+                  class="upload_img"
+                  style="
+                    display: inline-block;
+                    width: 24px;
+                    height: 21px;
+                    background-image: url(./img/upload.svg);
+                  "
+                ></i>
+                Upload photo
+              </label>
+            </div>
+          </div>
+          <div class="main__result-img">
+            <div class="result-img__div">
+              <div class="load"></div>
+              <div id="res-image" class="drop-zone">
+                <input
+                  type="file"
+                  id="upload__img"
+                  class="drop-zone__input"
+                  accept=".png, .jpg, .jpeg, .webp"
+                />
+                <img
+                  alt="Three joyful individuals leaping in the air on a snowy day with trees and a street caution sign in the background"
+                  id="rend_img"
+                  width="450"
+                  height="310"
+                  src="./img/without-bg/1.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__req-code">
+          <div id="req_code">
+            <p class="requirements"></p>
+            <div class="code_example" id="text-to-copy"></div>
+          </div>
+          <div class="code_buttons">
+            <button class="c_btn js_btn gtm-track-try-demo">JS / React</button>
+            <button class="c_btn nodejs_btn gtm-track-try-demo">JS / Node</button>
+            <button class="c_btn java_btn gtm-track-try-demo">Java</button>
+            <button class="c_btn python_btn gtm-track-try-demo">Python</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="find">
+          <a href="https://picsart.io/api-reference" class="gtm-track-try-demo" target="_blank"
+            >Find more details</a
+          >
+        </div>
+        <div class="footer_btns">
+          <form
+            action="https://console.picsart.io/login"
+            target="_blank"
+            method="get"
+          >
+            <button class="api-key_btn gtm-track-try-demo">Get API key</button>
+          </form>
+          <button
+            id="copy"
+            class="copy-code_btn gtm-track-try-demo"
+            aria-label="aria-copy"
+            onclick="copyCode()"
+          >
+            <span class="c_btn-txt">Copy code</span>
+            <i
+              class="c_btn-i"
+              style="
+                width: 17px;
+                height: 17px;
+                background-image: url(./img/copy.svg);
+              "
+            >
+            </i>
+          </button>
+          <button
+            id="share"
+            class="share_btn"
+            aria-label="aria-share"
+            onclick="shareCode()"
+          >
+            <i
+              class="c_btn-i"
+              style="
+                width: 17px;
+                height: 17px;
+                background-image: url(./img/share.svg);
+              "
+            >
+            </i>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html> -->

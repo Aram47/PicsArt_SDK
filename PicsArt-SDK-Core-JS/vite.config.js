@@ -26,6 +26,23 @@ export default defineConfig({
           src: 'src/Enhance/img/patterns/*',
           dest: 'img/patterns',
         },
+        // RemoveBg
+        { 
+          src: 'src/RemoveBg/styles/*.css', 
+          dest: 'styles' 
+        },
+        { 
+          src: 'src/RemoveBg/img/*', 
+          dest: 'img' 
+        },
+        { 
+          src: 'src/RemoveBg/img/patterns/*', 
+          dest: 'img/patterns' 
+        },
+        { 
+          src: 'src/RemoveBg/img/without-bg/*', 
+          dest: 'img/without-bg' 
+        },
       ],
     }),
   ],

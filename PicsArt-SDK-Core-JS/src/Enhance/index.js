@@ -312,7 +312,6 @@ export class Enhance {
     const afterImg = document.querySelector('.after_img');
     const mainImage = document.getElementById('res-image');
     mainImage.classList.remove(mainImage.classList[mainImage.classList.length - 1]);
-    // beforeImg.src = `./img/img_small/${activeButton}.jpg`;
     beforeImg.src = ImagesArray[activeButton];
     afterImg.src = IMAGES_URL[activeButton];
     this.patternData.imageUrl = IMAGES_URL[activeButton];

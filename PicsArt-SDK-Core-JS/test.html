@@ -4,14 +4,21 @@
   <title>Тест PicsArt SDK</title>
   <link rel="stylesheet" href="dist/styles/style.css">
   <link rel="stylesheet" href="dist/styles/gilroyfonts.css">
+  <link rel="stylesheet" href="dist/styles/RemoveBgStyle.css">
+  <link rel="stylesheet" href="dist/styles/RemoveBgGDemos-remove-background-style-style.min.css">
 </head>
 <body>
   <div id="app-container"></div>
-  <!-- <script src="dist/index.umd.js"></script> -->
-  <!-- <script>
-    const enhance = new window.PicsArtSDK.Enhance('your-api-key', 'app-container');
-    enhance.initializeUI();
-  </script> -->
+  <div id="app-container2"></div>
+  <script src="dist/index.umd.js"></script>
+  <script>
+    // console.log(PicsArtSDK)
+    // const enhance = new PicsArtSDK.Enhance('your-api-key', 'app-container');
+    // enhance.initializeUI();
+
+    const remove = new PicsArtSDK.RemoveBackground('your-api-key', 'app-container2');
+    remove.initializeUI();
+  </script>
   <!-- <script type="module" src="test.js"></script> -->
 </body>
 </html>

@@ -1,14 +1,14 @@
 import { Enhance } from './Enhance/index.js';
-// export * from './RemoveBg/index.js';
+import { RemoveBackground } from './RemoveBg/index.js';
 
 if (typeof window !== 'undefined') {
   window.PicsArtSDK = {
     Enhance,
-    // RemoveBg,
+    RemoveBackground,
   };
 }
 
 export { 
-  Enhance
-  // RemoveBg 
+  Enhance,
+  RemoveBackground
 };
