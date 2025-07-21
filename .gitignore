@@ -8,6 +8,6 @@
 /PicsArt-SDK-Core-JS/dist
 
 # temp ignore
-/PicsArt-SDK-React
 /PicsArt-SDK-React-TypeScript
+# /PicsArt-SDK-React
 # /PicsArt-SDK-Core-JS/src/RemoveBg
